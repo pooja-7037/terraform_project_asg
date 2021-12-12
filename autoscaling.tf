@@ -55,12 +55,3 @@ module "asg" {
     },
   ]
 }
-
-# resource "aws_autoscaling_attachment" "asg_attachment_alb" {
-#   depends_on = [
-#     module.asg,
-#     module.alb
-#   ]
-#    autoscaling_group_name = module.asg.autoscaling_group_id
-#    alb_target_group_arn   = module.alb.target_group_arns
-#  }
