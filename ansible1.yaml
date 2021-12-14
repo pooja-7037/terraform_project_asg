@@ -1,0 +1,22 @@
+---
+- hosts: web
+  become: yes
+  connection: ssh
+  vars:
+          ubu_home: /home/ubuntu
+  tasks:
+  - name: create user
+    ansible.builtin.user:
+            name: riya
+
+  - name: install docker
+    get_url:
+            url: https://get.docker.com
+            dest: '{{ ubu_home }}/get-docker.sh'
+
+
+
+  - name: install docker for scipt
+    ansible.builtin.command: sh get-docker.sh
+    args:
+            chdir: '{{ ubu_home }}'
