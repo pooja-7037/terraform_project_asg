@@ -9,7 +9,7 @@ variable "ssh_key" {
 }
 
 # variable "security_group_id" {}
-
+# same
 # variable "vpcid" {
 #     type = string
 #     default = "vpc-07e733e21a5755e17"
