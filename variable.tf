@@ -7,7 +7,7 @@ variable "ssh_key" {
     type = string
     default = "terraform_course"
 }
-
+#
 # variable "security_group_id" {}
 
 # variable "vpcid" {
